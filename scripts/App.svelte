@@ -1,8 +1,31 @@
 <script>
-	let { name } = $props();
+
+	const copyableTexts = [
+		'🙏',
+		'🥰',
+		'😍',
+		'🌈',
+		'✨',
+		'👍',
+		'😂', 
+		'🤣',
+		'😭'
+	]
+
+
 </script>
 
-<h2>Hello {name}! 🧝🏿</h2>
+<h1>✨ Mes emoji prefs 🌈</h1>
+
+<ul class="copyables">
+	{#each copyableTexts as text}
+		<li>
+			<span>{text}</span>
+		</li>
+	{/each}
+</ul>
+
+
 
 <style lang="scss">
 	
@@ -38,14 +61,34 @@
 		margin: 0 auto;
 
 		@media (min-width: 640px) {
-			max-width: 70rem;
+			max-width: 60rem;
 		}
 	}
 
-	h2 {
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
+	.copyables{
+		list-style: none;
+
+		text-align: center;
+
+		li{
+			display: inline-flex;
+
+			font-size: 6em;
+
+			width: 1.2em;
+			height: 1.2em;
+			padding: 0.8em;
+			margin: 0.2em;
+
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+
+			border-radius: 10%;
+
+			background-color: var(--secundary-background-color);
+
+		}
 	}
 	
 </style>

@@ -105,6 +105,11 @@
 		}
 	}
 
+	h1{
+		text-align: center;
+		padding: 1em 0;
+	}
+
 	.copyables{
 		list-style: none;
 
@@ -145,7 +150,7 @@
 		position: absolute;
 
 		pointer-events: none;
-		
+
 		background-color: var(--primary-background-color);
 		border: 1px solid var(--secundary-foreground-color);
 		transform: translateX(-50%) translateY(-150%);
